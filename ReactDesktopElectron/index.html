@@ -1,1 +1,22 @@
-Hello React Poznań!
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Desktop Electron - example</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        background: rgb(239, 239, 239);
+      }  
+    </style>
+    <script>
+      // install babel hooks in the renderer process
+      require('babel-register');
+      require('./src/app');
+    </script>
+  </head>
+
+  <body>
+    <div id="app"></div>
+  </body>
+</html>

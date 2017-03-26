@@ -8,7 +8,7 @@ const url = require('url')
 let mainWindow
 
 function createWindow () {
-  mainWindow = new BrowserWindow({width: 800, height: 600})
+  mainWindow = new BrowserWindow({width: 600, height: 268})
 
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
@@ -16,7 +16,7 @@ function createWindow () {
     slashes: true
   }))
 
-//   mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools()
 
   mainWindow.on('closed', function () {
     mainWindow = null
@@ -24,9 +24,7 @@ function createWindow () {
 }
 app.on('ready', createWindow)
 app.on('window-all-closed', function () {
-  if (process.platform !== 'darwin') {
     app.quit()
-  }
 })
 
 app.on('activate', function () {
